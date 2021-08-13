@@ -1,0 +1,5 @@
+plugins:
+  - name: removeTitle
+    active: false
+  - name: remoViewBox
+    active: false

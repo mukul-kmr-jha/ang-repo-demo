@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "../out-tsc/app-server",
+    "baseUrl": "."
+  },
+  "angularCompilerOptions": {
+    "entryModule": "app/app.server.module#AppServerModule",
+    "enableIvy": true
+  },
+  "files": [
+    "main.server.ts",
+    "../server.ts",
+  ],
+  "include": [
+    "src/**/*.d.ts",
+    "../server/config.ts",
+    "../server/config-common.ts",
+    "../server/enums/**/*.ts",
+    "../server/routes/**/*.ts",
+    "../server/services/**/*.ts",
+    "../server/utils/**/*.ts",
+    "../server/support/**/*.ts",
+  ]
+}

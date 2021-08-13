@@ -1,0 +1,66 @@
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .icons-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+</style>
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <span>Welcome</span>
+</div>
+
+<div class="content" role="main">
+
+  <h2>Here are my SVGs</h2>
+  <div class="icons-container">
+    <span class="icon" [innerHTML]="personIcon"></span>
+    <span class="icon" [innerHTML]="callIcon"></span>
+    <span class="icon" [innerHTML]="emailIcon"></span>
+    <span class="icon" [innerHTML]="crossIcon"></span>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
